@@ -25,10 +25,12 @@ const addNewEmployee = (id, fullName, dayOfBirth, address, salary, positon) => {
 }
 
 const displayEmployee = () => {
-    const tbody = document.querySelector("#employeeTable tbody");
+    
+   const tbody = document.querySelector("#employeeTable tbody");
 
-   listEmployee.sort((employee, employeeNext) => employee.fullName.localeCompare(employeeNext.fullName))
-
+    // Sắp xếp danh sách họ tên theo alphabet
+   listEmployee.sort((employee, employeeNext) => employee.fullName.split(" ").pop().localeCompare(employeeNext.fullName.split(" ").pop()))
+   
    listEmployee.forEach(employee => {
         const row = document.createElement("tr");
         row.innerHTML = `
@@ -43,11 +45,10 @@ const displayEmployee = () => {
     });
 }
 
-
-addNewEmployee(1, 'Nguyen Van A', '01/01/1985', 'Hà Nội', 5000000, 'Công nhân');
-addNewEmployee(2, 'Tran Thi B', '10/05/1990', 'TP Hồ Chí Minh', 6000000, 'Tổ trưởng');
-addNewEmployee(3, 'Le Van C', '20/07/1995', 'Đà Nẵng', 5500000, 'Công nhân');
-addNewEmployee(4, 'Le Van D', '20/07/1992', 'Đà Nẵng', 6500000, 'Công nhân');
-addNewEmployee(5, 'Le Van E', '20/07/1995', 'Đà Nẵng', 8500000, 'Công nhân');
+addNewEmployee(1, 'Nguyen Van Anh', '01/01/1985', 'Hà Nội', 5000000, 'Công nhân');
+addNewEmployee(2, 'Tran Thi Lan', '10/05/1990', 'TP Hồ Chí Minh', 6500000, 'Tổ trưởng');
+addNewEmployee(3, 'Le Van Bao', '22/07/1995', 'Huế', 5500000, 'Tổ Phó');
+addNewEmployee(4, 'Le Van Phuong', '20/03/1992', 'Vũng Tàu', 5300000, 'Công nhân');
+addNewEmployee(5, 'Le Van Xuan', '10/07/1980', 'An Giang', 8500000, 'Công nhân');
 
 displayEmployee();

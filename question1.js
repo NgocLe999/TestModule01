@@ -9,7 +9,7 @@ const averageSum = (array)  => {
     }
 
     // Check chia hết cho 3
-    let divisible = array.filter((number) => number % 3 === 0);
+    const divisible = array.filter((number) => number % 3 === 0);
 
     // Kiểm tra nếu không có số nào chia hết cho 3
     if (divisible.length === 0) {
@@ -20,11 +20,11 @@ const averageSum = (array)  => {
     let sum = divisible.reduce((acc, number) => acc + number, 0);
 
     // Tính trung bình cộng
-    let average = sum / divisible.length;
+    const average = sum / divisible.length;
 
     return `Trung bình cộng các số chia hết cho 3 là: ${average}`;
 }
 
 // Example
-let array = [3, 7, 5, 17, 82, 2, 40];
+const array = [3, 7, 5, 17, 82, 2, 40];
 console.log(averageSum(array));

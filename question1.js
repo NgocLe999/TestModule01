@@ -35,5 +35,5 @@ const averageSum = (array)  => {
 // Example
 // const array = [3, 7, 5, 17, 82, 2, 40];
 const array = addItemToArray();
-
+alert(`Mảng bạn đã nhập là [${array}]`)
 averageSum(array);

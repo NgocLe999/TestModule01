@@ -1,9 +1,18 @@
 // Câu 1:
+
+
+const addItemToArray = ()=> {
+    let input = prompt("Nhập các phần tử của mảng, cách nhau bởi dấu phẩy (ví dụ: 1,2,3,4):");
+    let array = input.split(',').map(Number);
+    return array;
+}
+
+
 const averageSum = (array)  => {
 
     // Check array không quá 50 phần tử
     if (array.length >= 50) {
-        return `Số phần tử của mảng đã quá 50 phần tử. Vui lòng thử lại!`
+        return alert(`Số phần tử của mảng đã quá 50 phần tử. Vui lòng thử lại!`);
     }
 
     // Check chia hết cho 3
@@ -11,7 +20,7 @@ const averageSum = (array)  => {
 
     // Kiểm tra nếu không có số nào chia hết cho 3
     if (divisible.length === 0) {
-        return "Không có số nào trong mảng chia hết cho 3";
+        return alert("Không có số nào trong mảng chia hết cho 3");
     }
 
     // Tính tổng các số chia hết cho 3
@@ -20,9 +29,11 @@ const averageSum = (array)  => {
     // Tính trung bình cộng
     const average = sum / divisible.length;
 
-    return `Trung bình cộng các số chia hết cho 3 là: ${average}`;
+    return alert(`Trung bình cộng các số chia hết cho 3 là: ${average}`);
 }
 
 // Example
-const array = [3, 7, 5, 17, 82, 2, 40];
-console.log(averageSum(array));
+// const array = [3, 7, 5, 17, 82, 2, 40];
+const array = addItemToArray();
+
+averageSum(array);

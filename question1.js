@@ -1,6 +1,4 @@
-// CÂU 1: Cho một mảng số nguyên có số phần tử không vượt quá 50 phần tử, viết chương trình
-// hiển thị trung bình cộng các số có trong mảng chia hết cho 3
-
+// Câu 1:
 const averageSum = (array)  => {
 
     // Check array không quá 50 phần tử

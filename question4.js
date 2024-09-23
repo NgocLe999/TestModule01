@@ -1,3 +1,4 @@
+// Câu 4: 
 class Employee {
     id;
     fullName;
@@ -25,7 +26,7 @@ const addNewEmployee = (id, fullName, dayOfBirth, address, salary, positon) => {
 }
 
 const displayEmployee = () => {
-    
+
    const tbody = document.querySelector("#employeeTable tbody");
 
     // Sắp xếp danh sách họ tên theo alphabet

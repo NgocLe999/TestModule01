@@ -1,7 +1,4 @@
-// Câu 2: Viết hàm cho phép nhập vào một số nguyên dương, kiểm tra xem số vừa nhập đó có
-// phải là số hoàn hảo hay không. Chương trình sẽ trả về true nếu số đó là số hoàn hảo và false
-// nếu không phải là số hoàn hảo.
-
+// Câu 2: 
 const isPerfectNumber = (number) => {
     
     // Kiểm tra nếu n là số nguyên dương

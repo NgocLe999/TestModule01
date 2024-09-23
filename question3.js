@@ -1,3 +1,4 @@
+// Câu 3:
 const isLeapYear = (year) => {
     // Kiểm tra năm nhuận
     if ((year % 4 === 0 && year % 100 !== 0) || (year % 100 === 0 && year % 400 === 0)) {
@@ -13,7 +14,6 @@ const validateMonthAndYear = (input) => {
     const regex = /^(0[1-9]|1[0-2])\/\d{4}$/;
     return regex.test(input);
 }
-
 
 const getDayInMonth = (month, year) => {
     // Kiểm tra số ngày của từng tháng
